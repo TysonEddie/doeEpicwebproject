@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Do-epic-logo (1).svg" type = "image/x-icon">
+    <title>search doepic</title>
+    <style>
+      body{
+          background-position: center; /* background image position center */
+          background-color: #000000; /* black background color */
+          color: #ffffff; /* add a white text color */
+          text-align: center; /* put text align center */
+          width: auto; /* display size format width */
+        }
+        
+        header{
+          width: 100%; /* Full-width */
+          position: sticky; /* add position sticky */
+          top: 0px; /* no gap top */
+          color: #ffffff; /* add a white text color */
+          background: #000000; /* black background color */
+          background-position: center; /* add text align center */
+        }
+        
+        .menu-grid{
+          display: grid; /* add grid */
+          grid-template-columns: 33% 33% 33%; /* Add some value of grid template columns */
+          background: #000000; /* black background color */
+        }
+        
+        .menu{
+          color: #ffffff; /* add a white text color */
+          font-family: Sans-Serif; /* add font family */
+        }
+        
+        .icon {
+            /* svg icon styling */
+          display: inline-block;
+          width: 70px;
+          height: 70px;
+          stroke-width: 0;
+          stroke: currentColor;
+          fill: currentColor;
+          color: white;
+        }
+
+        #myInput {
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            width: 100%; /* Full-width */
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            border: 1px solid #ddd; /* Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
+        }
+        
+        #myUL {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #myUL li a {
+            border: 1px solid #ddd; /* Add a border to all links */
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6; /* Grey background color */
+            padding: 12px; /* Add some padding */
+            text-decoration: none; /* Remove default text underline */
+            font-size: 18px; /* Increase the font-size */
+            color: #000000; /* Add a black text color */
+            display: block; /* Make it into a block element to fill the whole list */
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee; /* Add a hover effect to all links, except for headers */
+        }
+    </style>
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName('li');
+        
+          // Loop through all list items, and hide those who don't match the search query
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+</head>
+<body>
+
+  <header>
+    <div class="menu-grid" id="menu">
+  
+    <div>
+      <svg class="icon icon-circle-left" onclick="location.href='doepic-index.html'">
+      <use xlink:href="#icon-circle-left"></use>
+      <symbol id="icon-circle-left" viewBox="0 0 32 32">
+        <path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z"></path>
+        <path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
+      </symbol>
+      </svg>
+    </div>
+    
+    <div>
+      <h1 class="menu">menu</h1>
+    </div>
+    
+    <div>
+      <svg class="icon icon-circle-right" onclick="location.href='doepichome-index.html'">
+      <use xlink:href="#icon-circle-right"></use>
+      <symbol id="icon-circle-right" viewBox="0 0 32 32">
+        <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+        <path d="M11.086 22.086l2.829 2.829 8.914-8.914-8.914-8.914-2.828 2.828 6.086 6.086z"></path>
+      </symbol>
+      </svg>
+    </div>
+    
+    </div>
+  </header>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <ul id="myUL">
+        <li><a href="#">Steve Jobs</a></li>
+        <li><a href="#">Bill Gates</a></li>
+        <li><a href="#">Elon Musk</a></li>
+        <li><a href="#">Henry Ford</a></li>
+        <li><a href="#">Jack Ma</a></li>
+        <li><a href="#">Jeff Bezos</a></li>
+        <li><a href="#">Larry Page</a></li>
+        <li><a href="#">Mark Zuckerberg</a></li>
+        <li><a href="#">Mery Kay Ash</a></li>
+        <li><a href="#">Mukesh Ambani</a></li>
+        <li><a href="#">Oprah Winfrey</a></li>
+        <li><a href="#">Peter Jones</a></li>
+        <li><a href="#">Phil Knight</a></li>
+        <li><a href="#">Ratan Tata</a></li>
+        <li><a href="#">Ray Kroc</a></li>
+        <li><a href="#">Rupert Murdoch</a></li>
+        <li><a href="#">Sir Richard Branson</a></li>
+        <li><a href="#">Ted Turner</a></li>
+        <li><a href="#">Walt Disney</a></li>
+        <li><a href="#">Warren Buffett</a></li>
+        <li><a href="#">Vince McMahon</a></li>
+        <li><a href="#">Sara Blakely</a></li>
+        <li><a href="#">Shantanu Narayen</a></li>
+        <li><a href="#">Arvind Krishna</a></li>
+        <li><a href="#">Satya Nadella</a></li>
+        <li><a href="#">Ajay Banga</a></li>
+        <li><a href="#">Parag Agrawal</a></li>
+        <li><a href="#">Charles Geschke</a></li>
+        <li><a href="#">John Warnock</a></li>
+        <li><a href="#">Laxman Narasimhan</a></li>
+        <li><a href="#">Nikesh Arora</a></li>
+        <li><a href="#">Sundar Pichai</a></li>
+        <li><a href="#">Neal Mohan</a></li>
+        <li><a href="#">Leena Nair</a></li>
+        <li><a href="#">Sanjay Mehrotra</a></li>
+        <li><a href="#">Indra Nooyi</a></li>
+        <li><a href="#">Jayshree Ullal</a></li>
+        <li><a href="#">David Wadhwani</a></li>
+        <li><a href="#">Rajeev Suri</a></li>
+        <li><a href="#">George Kurian</a></li>
+        <li><a href="#">Amy Banse</a></li>
+        <li><a href="#">Vasant Narasimhan</a></li>
+        <li><a href="#">Bruce Chizen</a></li>
+        <li><a href="#">Rakesh Kapoor</a></li>
+        <li><a href="#">W. Don Cornwell</a></li>
+        <li><a href="#">Shah Rukh Khan</a></li>
+        <li><a href="#">Akshay Kumar</a></li>
+        <li><a href="#">Amitabh Bachchan</a></li>
+        <li><a href="#">Sandeep Maheshwari</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+
+    </ul>
+</body>
+</html>

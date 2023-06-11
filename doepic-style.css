@@ -1,0 +1,117 @@
+body{
+    background: black;
+    color: white;
+    width: auto;
+    text-align: center;
+}
+
+.header{
+    font-size: x-large;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    color: white;
+    background: black;
+    background-attachment: ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-grid{
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+}
+
+.company{
+    font-weight: bold;
+    font-family: Sans-Serif;
+    font-style: italic;
+    color: black;
+}
+
+.company-svg{
+    height: 90px;
+    width: 90%;
+}
+
+.product-area{
+    margin-top: 0px;
+    text-align: left;
+    //background: linear-gradient(-45deg, black, black, black, black, black, green, green);
+    background-color: white;
+}
+
+.ads-area{}
+
+.ads{
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.product{
+        box-shadow: 5px 5px 8px black;
+        background: #ffffff;
+        background-color: #ffffff;
+        border-radius:4px;
+        border:1px solid #4b8f29;
+        display:inline-block;
+        cursor:pointer;
+        color:#000000;
+        font-family:Arial;
+        font-size:13px;
+        font-weight:bold;
+        //padding:3px 6px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #5b8a3c;
+        margin-top: 10px;
+        margin-right: 8px;
+        margin-left: 8px;
+        margin-bottom: 10px;
+    }
+    .product:hover {
+        background: black;
+        color: white;
+    }
+    .product:active {
+        position:relative;
+        top:1px;
+    }
+
+    .product-image{
+        height: 260px;
+        width: 280px;
+    }
+    
+    .icon {
+  display: inline-block;
+  width: 2.5em;
+  height: 3.9em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.grid-container{
+  text-align: center;
+  background: black;
+  color: white;
+  font-family: Courier New;
+}
+
+.grid-follow{
+  display: grid;
+  grid-template-columns: 16.6% 15.6% 16.6% 16.6% 16.6% 16.6%;
+  background: white;
+  color: black;
+}
+
+.with-company{
+  margin-top: 5px;
+  height: 150px;
+  width: 100%;
+  color: #ffffff;
+}
